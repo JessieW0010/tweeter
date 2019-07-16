@@ -6,10 +6,11 @@ header {
   flex-direction: column;
   height: 400px;
   width: 100%;
-  background-color: #8a008a;
+  background-color: #b3c8d8;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 
 .avatar-name h2 {
   margin: 0px;
+  font-weight: normal;
 }

@@ -29,13 +29,3 @@ main {
   width: 90%;
   margin: auto;
 }
-
-.create-tweet {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.tweet-input {
-  width: 90%;
-}
