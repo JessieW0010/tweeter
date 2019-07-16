@@ -1,0 +1,52 @@
+#tweet-container {
+  border: 5px solid #545149;
+}
+
+article footer {
+  padding: 0.5%;
+  height: 38px;
+  margin: 2%;
+  margin-top: 0;
+  border: none;
+  border-top: 5px solid #545149;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img {
+  height: 30px;
+  padding: 3px;
+}
+
+footer h6 {
+  margin-block-end: 0;
+  margin-block-start: 5px;
+  height: 30px;
+}
+
+article header {
+  padding: 0.5%;
+  margin: 2%;
+  margin-bottom: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header span {
+  display: inherit;
+}
+
+.tweet img {
+  padding-right: 5%;
+  height: 100px;
+}
+
+.tweet-input {
+  padding: 0.5%;
+  margin: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+}
