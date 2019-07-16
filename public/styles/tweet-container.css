@@ -1,12 +1,12 @@
-#tweet-container {
+article {
   border: 5px solid #545149;
 }
 
 article footer {
-  padding: 0.5%;
-  height: 38px;
+  padding: 0.5em;
   margin: 2%;
-  margin-top: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
   border: none;
   border-top: 5px solid #545149;
   overflow: auto;
@@ -19,14 +19,27 @@ footer img {
   padding: 3px;
 }
 
-footer h6 {
-  margin-block-end: 0;
-  margin-block-start: 5px;
+footer p {
+  margin: 0;
   height: 30px;
+  font-size: 18px;
 }
 
-article header {
-  padding: 0.5%;
+.tweet-handle {
+  margin-right: 2%;
+  display: none;
+}
+
+article:hover .tweet-handle {
+  display: inline;
+}
+
+article:hover .bold {
+  font-weight: bold;
+}
+
+article .tweet {
+  padding: 0.5em;
   margin: 2%;
   margin-bottom: 0;
   overflow: auto;
@@ -34,8 +47,12 @@ article header {
   justify-content: space-between;
 }
 
-header span {
+header .tweet-avatar {
   display: inherit;
+}
+
+header .profile {
+  font-size: 1.3em;
 }
 
 .tweet img {
@@ -44,9 +61,15 @@ header span {
 }
 
 .tweet-input {
-  padding: 0.5%;
-  margin: 2%;
+  margin: 3%;
   margin-top: 0;
-  margin-bottom: 0;
   overflow: auto;
+}
+
+article {
+  overflow: auto;
+}
+
+article:hover {
+  box-shadow: 15px 20px #3e556d72;
 }
