@@ -1,5 +1,8 @@
 article {
   border: 5px solid #545149;
+  overflow: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 article footer {
@@ -41,7 +44,6 @@ article:hover .bold {
 article .tweet {
   padding: 0.5em;
   margin: 2%;
-  margin-bottom: 0;
   overflow: auto;
   display: flex;
   justify-content: space-between;
@@ -56,8 +58,8 @@ header .profile {
 }
 
 .tweet img {
-  padding-right: 5%;
-  height: 100px;
+  padding-right: 1.3em;
+  height: 4em;
 }
 
 .tweet-input {
@@ -66,10 +68,10 @@ header .profile {
   overflow: auto;
 }
 
-article {
-  overflow: auto;
-}
-
 article:hover {
   box-shadow: 15px 20px #3e556d72;
+}
+
+#tweets-container {
+  margin-bottom: 3em;
 }
