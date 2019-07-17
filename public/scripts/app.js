@@ -42,27 +42,38 @@ const renderTweets = function(tweets) {
   // takes return value and appends it to the tweets container
 
   for (let tweet of tweets) {
-    console.log(createTweetElement(tweet));
     $('#tweets-container').append(createTweetElement(tweet));
   }
 }
 
 const loadTweets = function() {
   $.ajax("/tweets", {
-    method: "GET"
+    method: "GET", 
+    success: function(response) {
+      renderTweets(response);
+    }
   })
 }
+
+loadTweets();
 
 $("#tweet-text").on("submit", function(event) {
   event.preventDefault();
   const data = $(this).serialize();
-  $.ajax("/tweets", {
+  if (!data.slice(5)) {
+    alert("You didn't type anything");
+  } else if (data.slice(5).length > 140) {
+    alert("Your tweet is over 140 characters!");
+  } else {
+    $.ajax("/tweets", {
     method: "POST", 
     data, 
     success: function() {
-      console.log(data);
-    }
-  })
+      console.log("successful!");
+      }
+    })
+  }
+  
 })
 
 })
