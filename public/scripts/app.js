@@ -6,6 +6,13 @@
 
 $(document).ready(function() {
 // function takes a tweet object and returns a tweet <article> element containing the entire HTMl structure of the tweet
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = function(obj) {
 
   const $header = `
@@ -16,7 +23,7 @@ const createTweetElement = function(obj) {
         </span>
         <p class="tweet-handle profile bold">${obj.user["handle"]}</p>
       </header>`
-  const $p = `<p class="tweet-input bold">${obj.content["text"]}</p>`;
+  const $p = `<p class="tweet-input bold">${escape(obj.content["text"])}</p>`
   const $footer = `
       <footer>
         <p class="tweet-days bold">${obj.created_at}</p>
@@ -40,9 +47,10 @@ const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
+  $('#tweets-container').empty();
 
   for (let tweet of tweets) {
-    $('#tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
   }
 }
 
@@ -54,8 +62,6 @@ const loadTweets = function() {
     }
   })
 }
-
-loadTweets();
 
 $("#tweet-text").on("submit", function(event) {
   event.preventDefault();
@@ -69,11 +75,12 @@ $("#tweet-text").on("submit", function(event) {
     method: "POST", 
     data, 
     success: function() {
-      console.log("successful!");
-      }
+      // empty text area if successful
+      $("#tweet-text-area").val("");
+      loadTweets();
+    }
     })
   }
-  
 })
 
 })
