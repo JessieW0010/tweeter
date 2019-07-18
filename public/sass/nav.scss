@@ -1,3 +1,8 @@
+$primary-color: #4056A1;
+$primary-font: 'Bungee', sans-serif;
+$secondary-font: 'Source Sans Pro', sans-serif;
+$title-font: 'Bungee', sans-serif;
+
 .fixed-top {
   position: fixed;
   top: 0;
@@ -7,9 +12,9 @@
   height: 120px;
   width: 100vw;
   padding: 1.5em;
-  background-color: #4056A1;
+  background-color: $primary-color;
   color: #FFFFFF;
-  font-family: "Bungee", sans-serif;
+  font-family: $title-font;
 }
 
 .logo {
@@ -24,7 +29,7 @@
 }
 
 .nav-link {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $secondary-font;
 }
 
 .toggle-btn img {
@@ -38,15 +43,7 @@
 }
 
 @keyframes moveup {
-  0% {
-    bottom: 0px;
-  }
-  25% {
-    bottom: 1px;
-  }
-  50% {
-    bottom: 2px;
-  }
+  0% {bottom: 0px}
+  25% {bottom: 1px}
+  50% {bottom: 2px}
 }
-
-/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,46 @@
+$alert-color: #E2574C;
+$primary-color: #4056A1;
+$title-font: 'Bungee', sans-serif;
+$outline-color: #545149;
+
+.new-tweet {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 5px solid $outline-color;
+    width: 100%;
+    font-weight: bold;
+  }
+  input {
+    font-family: $title-font;
+    color: #FFFFFF;
+    background-color: $primary-color;
+  }
+}
+
+.counter {
+  font-family: $title-font;
+  float: right;
+}
+
+.alert  {
+  margin-top: 2em;
+  border: 5px solid $alert-color;
+  display: flex;
+  img {
+    padding: 0.5em;
+    height: 4em;
+    width: 4em;
+  }
+  p {
+    color: $alert-color;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+#alert-container {
+  display: none;
+}

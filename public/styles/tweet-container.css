@@ -4,7 +4,6 @@ article {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-
 article footer {
   padding: 0.5em;
   margin: 2%;
@@ -16,12 +15,22 @@ article footer {
   display: flex;
   justify-content: space-between;
 }
+article .tweet {
+  padding: 0.5em;
+  margin: 2%;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+article .tweet img {
+  padding-right: 1.3em;
+  height: 4em;
+}
 
 footer img {
   height: 30px;
   padding: 3px;
 }
-
 footer p {
   margin: 0;
   height: 30px;
@@ -33,45 +42,31 @@ footer p {
   display: none;
 }
 
+article:hover {
+  box-shadow: 15px 20px #3e556d72;
+}
 article:hover .tweet-handle {
   display: inline;
 }
-
 article:hover .bold {
   font-weight: bold;
-}
-
-article .tweet {
-  padding: 0.5em;
-  margin: 2%;
-  overflow: auto;
-  display: flex;
-  justify-content: space-between;
 }
 
 header .tweet-avatar {
   display: inherit;
 }
-
 header .profile {
   font-size: 1.3em;
-}
-
-.tweet img {
-  padding-right: 1.3em;
-  height: 4em;
 }
 
 .tweet-input {
   margin: 3%;
   margin-top: 0;
-  overflow: auto;
-}
-
-article:hover {
-  box-shadow: 15px 20px #3e556d72;
+  overflow-wrap: break-word;
 }
 
 #tweets-container {
   margin-bottom: 3em;
 }
+
+/*# sourceMappingURL=tweet-container.css.map */

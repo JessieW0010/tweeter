@@ -1,16 +1,18 @@
 .avatar {
-  margin-top: 120px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 400px;
-  width: 100%;
-  background-color: #b3c8d8;
-  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 
-.avatar-name h2 {
-  margin: 0px;
-  font-weight: normal;
+.avatar-pic {
+  height: 100%;
 }
+.avatar-pic h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.avatar-pic img {
+  margin-top: 2.5em;
+}
+
+/*# sourceMappingURL=header.css.map */

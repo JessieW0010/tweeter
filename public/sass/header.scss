@@ -1,0 +1,16 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.avatar-pic {
+  height: 100%;
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  img {
+    margin-top: 2.5em;
+  }
+}

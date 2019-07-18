@@ -30,23 +30,33 @@
     <!-- Top nav bar (fixed) -->
     <nav class="fixed-top">
       <span class="logo">tweeter</span>
-      <a class="nav-link"><strong>Write</strong> a new tweet</a>
+      <div class="new-tweet-slider">
+        <a class="nav-link"><strong>Write</strong> a new tweet</a>
+        <a class="toggle-btn"><img src="images/icons8-chevron-down-96.png" alt="slide-down"></a>
+      </div>
     </nav>
 
     <header class="avatar">
+      <div class="profile-background">
         <div class="avatar-pic">
-            <img src="/images/profile-hex.png"> 
+            <img src="/images/profile-hex.png" alt="profile-picture"> 
+            <br>
+            <h2>Jessie</h2>
         </div>
-        <br>
-        <div class="avatar-name">
-            <h2>Your Name</h2>
-        </div>
+      </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
 
       <!-- Submit a tweet -->
+      <div id="alert-container">
+        <section class="alert">
+          <img src="images/cancel.png" alt="error icon">
+          <p class="error-message">Error Message</p>
+        </section>
+      </div>
+
       <section class="new-tweet">
           <h2>Compose Tweet</h2>
           <form id="tweet-text">
@@ -54,7 +64,7 @@
             <input id="submit-tweet" class="bungee" type="submit" value="Tweet">
             <span class="counter bungee">140</span>
           </form>
-        </section>
+      </section>
 
       <!-- Tweets Submitted -->
       <div id="tweets-container">

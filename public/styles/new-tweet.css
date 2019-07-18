@@ -2,7 +2,6 @@
   padding-top: 2em;
   padding-bottom: 2em;
 }
-
 .new-tweet textarea {
   background: transparent;
   border: none;
@@ -10,14 +9,35 @@
   width: 100%;
   font-weight: bold;
 }
-
 .new-tweet input {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   color: #FFFFFF;
   background-color: #4056A1;
 }
 
 .counter {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   float: right;
 }
+
+.alert {
+  margin-top: 2em;
+  border: 5px solid #E2574C;
+  display: flex;
+}
+.alert img {
+  padding: 0.5em;
+  height: 4em;
+  width: 4em;
+}
+.alert p {
+  color: #E2574C;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#alert-container {
+  display: none;
+}
+
+/*# sourceMappingURL=new-tweet.css.map */

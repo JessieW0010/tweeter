@@ -23,7 +23,7 @@ const createTweetElement = function(obj) {
         </span>
         <p class="tweet-handle profile bold">${obj.user["handle"]}</p>
       </header>`
-  const $p = `<p class="tweet-input bold">${escape(obj.content["text"])}</p>`
+  const $p = `<div class="tweet-input bold">${escape(obj.content["text"])}</div>`
   const $footer = `
       <footer>
         <p class="tweet-days bold">${obj.created_at}</p>
@@ -67,20 +67,28 @@ $("#tweet-text").on("submit", function(event) {
   event.preventDefault();
   const data = $(this).serialize();
   if (!data.slice(5)) {
-    alert("You didn't type anything");
+    $("#alert-container").css("display", "inherit");
+    $(".error-message").text("You didn't write anything!");
   } else if (data.slice(5).length > 140) {
-    alert("Your tweet is over 140 characters!");
+    $("#alert-container").css("display", "inherit");
+    $(".error-message").text("Your tweet is over 140 characters!");
   } else {
     $.ajax("/tweets", {
     method: "POST", 
     data, 
     success: function() {
       // empty text area if successful
+      // hide error if there is not error
       $("#tweet-text-area").val("");
+      $("#alert-container").css("display", "none");
       loadTweets();
     }
     })
   }
+})
+
+$(".toggle-btn").on("click", function() {
+  $(".new-tweet").slideToggle();
 })
 
 })
