@@ -1,5 +1,3 @@
-$primary-color: #4056A1;
-$primary-font: 'Bungee', sans-serif;
 $secondary-font: 'Source Sans Pro', sans-serif;
 $title-font: 'Bungee', sans-serif;
 
@@ -11,10 +9,7 @@ $title-font: 'Bungee', sans-serif;
   z-index: 1000;
   height: 120px;
   width: 100vw;
-  padding: 1.5em;
-  background-color: $primary-color;
-  color: #FFFFFF;
-  font-family: $title-font;
+  padding: 1.5em 1.5em 0 1.5em;
 }
 
 .logo {

@@ -1,5 +1,8 @@
+$font-color: #545149;
+$shadow-color: #3e556d72;
+
 article {
-  border: 5px solid #545149;
+  border: 5px solid $font-color;
   overflow: auto;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -9,7 +12,7 @@ article {
     margin-top: 0.3em;
     margin-bottom: 0.3em;
     border: none;
-    border-top: 5px solid #545149;
+    border-top: 5px solid $font-color;
     overflow: auto;
     display: flex;
     justify-content: space-between;
@@ -45,7 +48,7 @@ footer {
 }
 
 article:hover {
-  box-shadow: 15px 20px #3e556d72;
+  box-shadow: 15px 20px $shadow-color;
   .tweet-handle {
     display: inline;
   }
@@ -71,4 +74,18 @@ header {
 
 #tweets-container {
   margin-bottom: 3em;
+}
+
+#scroll-up-btn {
+  z-index: 2000;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+#scroll-up-btn:hover {
+  cursor: pointer;
 }

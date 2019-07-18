@@ -91,4 +91,19 @@ $(".toggle-btn").on("click", function() {
   $(".new-tweet").slideToggle();
 })
 
+
+// When user scrolls down 120px fromt he top fo the document, show button
+$(document).on("scroll", function() {
+  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+    $("#scroll-up-btn").css("display", "block");
+  } else {
+    $("#scroll-up-btn").css("display", "none");
+  }
+});
+
+$("#scroll-up-btn").on("click", function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+})
+
 })

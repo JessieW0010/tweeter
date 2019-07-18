@@ -1,7 +1,8 @@
 $alert-color: #E2574C;
-$primary-color: #4056A1;
+$nav-background-color: #4056A1;
 $title-font: 'Bungee', sans-serif;
-$outline-color: #545149;
+$font-color: #545149;
+$nav-color: #FFFFFF;
 
 .new-tweet {
   padding-top: 2em;
@@ -9,14 +10,14 @@ $outline-color: #545149;
   textarea {
     background: transparent;
     border: none;
-    border-bottom: 5px solid $outline-color;
+    border-bottom: 5px solid $font-color;
     width: 100%;
     font-weight: bold;
   }
   input {
     font-family: $title-font;
-    color: #FFFFFF;
-    background-color: $primary-color;
+    color: $nav-color;
+    background-color: $nav-background-color;
   }
 }
 
