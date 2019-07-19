@@ -5,6 +5,8 @@ $(document).ready(function() {
     let counter = 140;
     if (counter - length < 0) {
       $(".counter").css("color", "red");
+    } else {
+      $(".counter").css("color", "#9D8189");
     }
     $(".counter").text(counter - length);
   });
