@@ -1,7 +1,7 @@
-$alert-color: #E2574C;
-$nav-background-color: #4056A1;
+$alert-color: #8C271E;
+$nav-background-color: #F4ACB7;
 $title-font: 'Bungee', sans-serif;
-$font-color: #545149;
+$font-color: #9D8189;
 $nav-color: #FFFFFF;
 
 .new-tweet {
@@ -13,6 +13,7 @@ $nav-color: #FFFFFF;
     border-bottom: 5px solid $font-color;
     width: 100%;
     font-weight: bold;
+    color: $font-color;
   }
   input {
     font-family: $title-font;
@@ -37,8 +38,10 @@ $nav-color: #FFFFFF;
   }
   p {
     color: $alert-color;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0;
   }
 }
 

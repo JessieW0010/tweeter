@@ -5,14 +5,15 @@
 .new-tweet textarea {
   background: transparent;
   border: none;
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid #9D8189;
   width: 100%;
   font-weight: bold;
+  color: #9D8189;
 }
 .new-tweet input {
   font-family: "Bungee", sans-serif;
   color: #FFFFFF;
-  background-color: #4056A1;
+  background-color: #F4ACB7;
 }
 
 .counter {
@@ -22,7 +23,7 @@
 
 .alert {
   margin-top: 2em;
-  border: 5px solid #E2574C;
+  border: 5px solid #8C271E;
   display: flex;
 }
 .alert img {
@@ -31,9 +32,11 @@
   width: 4em;
 }
 .alert p {
-  color: #E2574C;
-  font-size: 1.5em;
+  color: #8C271E;
+  font-size: 1.2em;
   font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 
 #alert-container {

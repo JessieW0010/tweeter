@@ -1,5 +1,5 @@
 article {
-  border: 5px solid #545149;
+  border: 5px solid #9D8189;
   overflow: auto;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -10,7 +10,7 @@ article footer {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   border: none;
-  border-top: 5px solid #545149;
+  border-top: 5px solid #9D8189;
   overflow: auto;
   display: flex;
   justify-content: space-between;
@@ -43,7 +43,7 @@ footer p {
 }
 
 article:hover {
-  box-shadow: 15px 20px #3e556d72;
+  box-shadow: 15px 20px #9D8189;
 }
 article:hover .tweet-handle {
   display: inline;

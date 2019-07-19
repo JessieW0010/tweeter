@@ -1,3 +1,4 @@
+// function checks for keyup event (user typing into textarea) and updates the text to the counter element
 $(document).ready(function() {
   $("#tweet-text-area").keyup(function() {
     let length = $(this).val().length;

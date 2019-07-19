@@ -1,5 +1,4 @@
-$font-color: #545149;
-$shadow-color: #3e556d72;
+$font-color: #9D8189;
 
 article {
   border: 5px solid $font-color;
@@ -48,7 +47,7 @@ footer {
 }
 
 article:hover {
-  box-shadow: 15px 20px $shadow-color;
+  box-shadow: 15px 20px $font-color;
   .tweet-handle {
     display: inline;
   }

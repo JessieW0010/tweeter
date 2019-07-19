@@ -7,9 +7,11 @@
 .avatar-pic {
   height: 100%;
 }
+
 .avatar-pic h2 {
   margin-top: 0;
   text-align: center;
+  font-family: "Bungee", sans-serif;
 }
 
 /*# sourceMappingURL=header.css.map */
