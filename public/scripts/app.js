@@ -98,6 +98,7 @@ $(document).ready(function() {
         // empty text area if successful
         // hide error if there is not error
         $("#tweet-text-area").val("");
+        $(".counter").text(140);
         $("#alert-container").css("display", "none");
         loadTweets();
       }
