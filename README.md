@@ -6,11 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshot
 
-<<<<<<< HEAD
 !["Gif of app functions"](tweeter.gif)
-=======
-!["Gif of app functions"](https://im2.ezgif.com/tmp/ezgif-2-213aa13114a7.gif)
->>>>>>> 0ef1352da3d1441e1c55b71c62d51d8522898347
 
 ## Getting Started
 
