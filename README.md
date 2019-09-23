@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshot
 
-!["Gif of app functions"](tweeter.gif)
+!["Gif of app functions"](public/images/tweeter.gif)
 
 ## Getting Started
 
