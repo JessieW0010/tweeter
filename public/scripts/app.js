@@ -5,10 +5,9 @@
  */
 
 $(document).ready(function() {
-
   // Escape() function refactors the user input from the text area
-  const escape =  function(str) {
-    let div = document.createElement('div');
+  const escape = function(str) {
+    let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
@@ -30,7 +29,7 @@ $(document).ready(function() {
     } else {
       return `${Math.floor(timeDiff / 1000)} seconds`;
     }
-  }
+  };
 
   // createTweetElement() takes in a tweet object and returns the formatted HTML to be appended onto the tweets-container
   const createTweetElement = function(obj) {
@@ -42,7 +41,9 @@ $(document).ready(function() {
           </span>
           <p class="tweet-handle profile bold">${obj.user["handle"]}</p>
         </header>`;
-    const $p = `<div class="tweet-input bold">${escape(obj.content["text"])}</div>`;
+    const $p = `<div class="tweet-input bold">${escape(
+      obj.content["text"]
+    )}</div>`;
     const $footer = `
         <footer>
           <p class="tweet-days bold">${createdAt(obj.created_at)} ago</p>
@@ -59,26 +60,28 @@ $(document).ready(function() {
         ${$p}
         ${$footer}
       </article>`;
-  }
+  };
 
   // renderTweets() function takes in an array of tweet objects, passes each object to createTweetElement() function and appends each to the tweets-container div
   // function first empties the tweets-container html
   const renderTweets = function(tweets) {
-    $('#tweets-container').empty();
+    $("#tweets-container").empty();
     for (let tweet of tweets) {
-      $('#tweets-container').prepend(createTweetElement(tweet));
+      $("#tweets-container").prepend(createTweetElement(tweet));
     }
   };
 
   // loadTweets() renders the tweets if the GET request was successful
   const loadTweets = function() {
     $.ajax("/tweets", {
-      method: "GET", 
+      method: "GET",
       success: function(response) {
         renderTweets(response);
       }
-    })
+    });
   };
+
+  loadTweets();
 
   // When the textarea value is submitted, and the value in the textarea passes the error tests and the POST request is successful, the function empties the text area (and error message if there is one), and calls loadTweets function
   $("#tweet-text").on("submit", function(event) {
@@ -92,16 +95,16 @@ $(document).ready(function() {
       $(".error-message").text("Your tweet is over 140 characters!");
     } else {
       $.ajax("/tweets", {
-      method: "POST", 
-      data, 
-      success: function() {
-        // empty text area if successful
-        // hide error if there is not error
-        $("#tweet-text-area").val("");
-        $(".counter").text(140);
-        $("#alert-container").css("display", "none");
-        loadTweets();
-      }
+        method: "POST",
+        data,
+        success: function() {
+          // empty text area if successful
+          // hide error if there is not error
+          $("#tweet-text-area").val("");
+          $(".counter").text(140);
+          $("#alert-container").css("display", "none");
+          loadTweets();
+        }
       });
     }
   });
@@ -111,10 +114,12 @@ $(document).ready(function() {
     $(".new-tweet").slideToggle();
   });
 
-
   // When user scrolls down 120px from the top of the document, the scroll up button will appear
   $(document).on("scroll", function() {
-    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+    if (
+      document.body.scrollTop > 120 ||
+			document.documentElement.scrollTop > 120
+    ) {
       $("#scroll-up-btn").css("display", "block");
     } else {
       $("#scroll-up-btn").css("display", "none");
@@ -126,5 +131,4 @@ $(document).ready(function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
-
-})
+});
